@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hoptions | Trending Options</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo">hoptions</div>
+        <div class="nav-actions">
+          <button class="ghost-button">Login</button>
+          <button class="primary-button">Get alerts</button>
+        </div>
+      </nav>
+      <div class="hero-content">
+        <div>
+          <span class="eyebrow">Realtime options intelligence</span>
+          <h1>Track options momentum in one clean dashboard.</h1>
+          <p>
+            hoptions highlights contracts with unusual volume and open interest so you can spot
+            institutional interest fast. Search any ticker to see key option statistics.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-button">View trending now</button>
+            <button class="secondary-button">Build a watchlist</button>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card__title">Market pulse</div>
+          <div class="pulse-metrics">
+            <div>
+              <span class="metric-label">Top contract</span>
+              <span class="metric-value">NVDA 540C</span>
+            </div>
+            <div>
+              <span class="metric-label">Volume spike</span>
+              <span class="metric-value">+318%</span>
+            </div>
+            <div>
+              <span class="metric-label">OI change</span>
+              <span class="metric-value">+45k</span>
+            </div>
+          </div>
+          <div class="hero-card__footer">Updated every 60 seconds</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="trending">
+        <div class="section-header">
+          <div>
+            <h2>Trending options</h2>
+            <p>Contracts with the highest volume relative to open interest.</p>
+          </div>
+          <div class="filters">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="call">Calls</button>
+            <button class="chip" data-filter="put">Puts</button>
+          </div>
+        </div>
+        <div class="table" role="table" aria-label="Trending options table">
+          <div class="table-header" role="row">
+            <span>Ticker</span>
+            <span>Contract</span>
+            <span>Type</span>
+            <span>Volume</span>
+            <span>Open interest</span>
+            <span>Vol/OI</span>
+            <span>Last</span>
+          </div>
+          <div class="table-body" id="trending-body"></div>
+        </div>
+      </section>
+
+      <section class="section" id="search">
+        <div class="section-header">
+          <div>
+            <h2>Search a ticker</h2>
+            <p>Pull option stats for any underlying in seconds.</p>
+          </div>
+          <div class="search-box">
+            <input
+              type="text"
+              id="ticker-input"
+              placeholder="Search ticker (e.g., AAPL)"
+              autocomplete="off"
+            />
+            <button id="search-button" class="primary-button">Search</button>
+          </div>
+        </div>
+        <div class="stats-heading">
+          <div>
+            <h3>Option stats for <span id="stats-ticker">NVDA</span></h3>
+            <p id="stats-source">Based on the latest market snapshot.</p>
+          </div>
+          <div class="stats-meta">
+            <span>Momentum signals</span>
+            <span>Liquidity view</span>
+            <span>Smart flow</span>
+          </div>
+        </div>
+        <div class="stats-grid" id="stats-grid"></div>
+      </section>
+
+      <section class="section banner">
+        <div>
+          <h3>Stay ahead of the options flow</h3>
+          <p>Get instant alerts when volume and open interest diverge.</p>
+        </div>
+        <button class="secondary-button">Start free trial</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>© 2024 hoptions. All rights reserved.</div>
+      <div class="footer-links">
+        <span>Privacy</span>
+        <span>Terms</span>
+        <span>Support</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
